@@ -1,0 +1,45 @@
+$threads-font-path: "~plaid-threads/fonts";
+@import "~plaid-threads/scss/typography";
+@import "~plaid-threads/scss/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70 * $unit;
+  max-width: 120 * $unit;
+  margin: 0 auto;
+}
+
+.grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 2 * $unit;
+}
+
+.accordionButton {
+  font-size: 1.6rem;
+  font-weight: 800;
+  border-bottom: 0;
+  padding: 16px;
+  &:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: #111111;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  &:not(.collapsed) {
+    color: #111111;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #ededed;
+  }
+}
