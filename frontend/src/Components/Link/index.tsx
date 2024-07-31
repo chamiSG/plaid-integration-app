@@ -30,6 +30,7 @@ const Link = () => {
           return;
         }
         const data = await response.json();
+        localStorage.setItem("access_token", data.access_token);
         dispatch({
           type: "SET_STATE",
           state: {
@@ -38,7 +39,6 @@ const Link = () => {
             isItemAccess: true,
           },
         });
-        localStorage.setItem("access_token", data.access_token);
       };
 
       // 'payment_initiation' products do not require the public_token to be exchanged for an access_token.

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Callout from "plaid-threads/Callout";
 import Button from "plaid-threads/Button";
 import InlineLink from "plaid-threads/InlineLink";
@@ -25,7 +25,7 @@ const Header = () => {
     linkTokenError,
     isPaymentInitiation,
   } = useContext(Context);
-  const { isItemAccess, linkSuccess } = useAuth()
+  const { isItemAccess, linkSuccess, logout } = useAuth()
 
   useEffect(() => {
     const getAccountData = async () => {
@@ -142,9 +142,19 @@ const Header = () => {
             <>
               {isItemAccess ? (
                 <>
-                  <h4 className={styles.subtitle}>
-                    Congrats! By linking an account, you have created an Item.
-                  </h4>
+                  <div className="w-100 d-flex justify-content-between">
+                    <h4 className={styles.subtitle}>
+                      Congrats! By linking an account, you have created an Item.
+                    </h4>
+                    <Button
+                      small
+                      centered
+                      secondary
+                      onClick={logout}
+                    >
+                      Logout
+                    </Button>
+                  </div>
                   <ProductTypesContainer productType="Account Detail">
                     {isLoading && (
                       <div className="py-4">Loading...</div>

@@ -40,6 +40,7 @@ type PlaidAction = {
 };
 
 interface PlaidContext extends PlaidState {
+  initialState: PlaidState,
   dispatch: Dispatch<PlaidAction>;
 }
 
@@ -63,7 +64,7 @@ export const PlaidProvider: React.FC<{ children: ReactNode }> = (
     }
   };
   const [state, dispatch] = useReducer(reducer, initialState);
-  return <Provider value={{ ...state, dispatch }}>{props.children}</Provider>;
+  return <Provider value={{ ...state, initialState, dispatch }}>{props.children}</Provider>;
 };
 
 export default Context;
