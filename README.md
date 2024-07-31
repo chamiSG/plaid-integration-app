@@ -1,65 +1,11 @@
-# Plaid quickstart
+# Plaid API Integration App
 
-This repository accompanies Plaid's [**quickstart guide**][quickstart].
-
-Here you'll find full example integration apps using our [**client libraries**][libraries].
-
-This Quickstart is designed to show as many products and configurations as possible, including all five officially supported client libraries and multiple Plaid APIs, against a React frontend. 
-
-If you prefer a non-React frontend platform, or a more minimal backend in one language with one endpoint, see the [Tiny Quickstart](https://github.com/plaid/tiny-quickstart), which shows a simpler backend and is available for JavaScript, Next.js, React, and React Native frontends.
-
-For Identity Verification, see the [Identity Verification Quickstart](https://github.com/plaid/idv-quickstart). 
-
-For Income, see the [Income sample app](https://github.com/plaid/income-sample). 
-
-For a more in-depth Transfer Quickstart, see the [Transfer Quickstart](https://github.com/plaid/transfer-quickstart) (Node only).
-
-![Plaid quickstart app](/assets/quickstart.jpeg)
-
-## Table of contents
-
-<!-- toc -->
-
-- [1. Clone the repository](#1-clone-the-repository)
-  - [Special instructions for Windows](#special-instructions-for-windows)
-- [2. Set up your environment variables](#2-set-up-your-environment-variables)
-- [3. Run the quickstart](#3-run-the-quickstart)
-  - [Run without Docker](#run-without-docker)
-    - [Pre-requisites](#pre-requisites)
-    - [1. Running the backend](#1-running-the-backend)
-      - [Node](#node)
-      - [Python](#python)
-      - [Ruby](#ruby)
-      - [Go](#go)
-      - [Java](#java)
-      - [.NET](#net) (community support only)
-    - [2. Running the frontend](#2-running-the-frontend)
-  - [Run with Docker](#run-with-docker)
-    - [Pre-requisites](#pre-requisites-1)
-    - [Running](#running-1)
-      - [Start the container](#start-the-container)
-      - [View the logs](#view-the-logs)
-      - [Stop the container](#stop-the-container)
-- [Test credentials](#test-credentials)
-- [Troubleshooting](#troubleshooting)
-- [Testing OAuth](#testing-oauth)
-
-<!-- tocstop -->
-
-## 1. Clone the repository
-
-Using https:
-
-```bash
-git clone https://github.com/plaid/quickstart
-cd quickstart
-```
+## 1. Installation
 
 Alternatively, if you use ssh:
 
 ```bash
-git clone git@github.com:plaid/quickstart.git
-cd quickstart
+git clone git@github.com:chamiSG/plaid-integration-app.git
 ```
 
 #### Special instructions for Windows
